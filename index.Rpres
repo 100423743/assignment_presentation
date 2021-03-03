@@ -1,0 +1,132 @@
+House Prices in Rural NY (Stat2Data)
+========================================================
+author: Ignacio Medina de Andrés
+date: 03/03/2021
+autosize: true
+font-import: https://fonts.googleapis.com/css2?family=Abel&display=swap
+font-family: 'Abel' 
+
+Data description
+========================================================
+transition: fade
+transition-speed: slow
+This Houses dataset is obtained from the Stat2Data package (more information clicking: [link](<https://cran.r-project.org/web/packages/Stat2Data/Stat2Data.pdf>))
+
+It represents the estimated house prices for a sample of 53 houses (*observations*) in Canton NY (a small town in upstate NY). The corresponding data frame would be composed with the following five *variables*.
+
+<li class="fragment fade-in">**Price**: Estimated price (in $1,000’s)</li>
+<li class="fragment fade-in">**Beds**: Number of bedrooms</li>
+<li class="fragment fade-in">**Baths**: Number of bathrooms</li>
+<li class="fragment fade-in">**Size**: Floor area of the house (in 1,000 square feet)</li>
+<li class="fragment fade-in">**Lot**: Size of the lot (in acres)</li>
+
+Slide With Code
+========================================================
+
+```{r echo=FALSE}
+library(Stat2Data)
+data(HousesNY)
+data <- HousesNY
+```
+
+```{r}
+summary(data)
+```
+
+
+Price - Size
+========================================================
+```{r, include=FALSE}
+library(plotly)
+```
+
+```{r echo=FALSE}
+p <- plot_ly(data, x = ~Size, y = ~Price, name = 'trace 0', type = 'scatter', mode="markers", color="orange")
+
+p <- p %>% layout(title = "Price per house size",
+                  xaxis = list(title = "Size (x 1,000 square feet)"))
+
+htmlwidgets::saveWidget(p,'plotly.html')
+```
+
+<style>
+  .p_iframe iframe {
+    width:100%;
+    height:700px;
+}
+</style>
+
+<div class="p_iframe">
+<iframe frameborder="0" seamless='seamless' scrolling=no src="plotly.html"></iframe>
+</div>
+
+Price - Beds
+========================================================
+```{r, include=FALSE}
+library(plotly)
+```
+
+```{r echo=FALSE}
+g <- plot_ly() %>% 
+  add_trace(data=data,
+            y = ~Price,
+            color = ~as.factor(Beds),
+            type = "box") %>% 
+  layout(title = "Price per number of beds",
+         xaxis = list(title = "Number of beds",
+                      range=c(1,7)))
+
+htmlwidgets::saveWidget(g,'plotly2.html')
+```
+
+<style>
+  .p_iframe iframe {
+    width:120%;
+    height:710px;
+}
+</style>
+
+<div class="p_iframe">
+<iframe frameborder="0" seamless='seamless' scrolling=no src="plotly2.html"></iframe>
+</div>
+
+
+Price - Beds
+========================================================
+```{r, include=FALSE}
+library(plotly)
+```
+
+```{r echo=FALSE}
+g <- plot_ly() %>% 
+  add_trace(data=data,
+            y = ~Price,
+            color = ~as.factor(Beds),
+            type = "box") %>% 
+  layout(title = "Price per number of beds",
+         xaxis = list(title = "Number of beds",
+                      range=c(1,7)))
+
+htmlwidgets::saveWidget(g,'plotly2.html')
+```
+
+<style>
+  .p_iframe iframe {
+    width:120%;
+    height:710px;
+}
+</style>
+
+<div class="p_iframe">
+<iframe frameborder="0" seamless='seamless' scrolling=no src="plotly2.html"></iframe>
+</div>
+
+
+
+
+
+
+
+
+
+
