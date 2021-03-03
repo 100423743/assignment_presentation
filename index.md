@@ -71,13 +71,6 @@ Price - Beds
 
 
 
-<style>
-  .p_iframe iframe {
-    width:120%;
-    height:710px;
-}
-</style>
-
 <div class="p_iframe">
 <iframe frameborder="0" seamless='seamless' scrolling=no src="plotly2.html"></iframe>
 </div>
