@@ -1,10 +1,16 @@
 House Prices in Rural NY (Stat2Data)
 ========================================================
-author: Ignacio Medina de Andrés
-date: 03/03/2021
+author: Ignacio Medina de Andres
+date: 07/03/2021
 autosize: true
 font-import: https://fonts.googleapis.com/css2?family=Abel&display=swap
-font-family: 'Abel' 
+font-family: 'Abel'
+css: custom.css
+
+
+
+<center><img src="https://www.neurosciencemarketing.com/wp-content/uploads/2008/04/home_for_sale_price.jpg" width="625" height="400"></center>
+
 
 Data description
 ========================================================
@@ -12,16 +18,20 @@ transition: fade
 transition-speed: slow
 This Houses dataset is obtained from the Stat2Data package (more information clicking: [link](<https://cran.r-project.org/web/packages/Stat2Data/Stat2Data.pdf>))
 
-It represents the estimated house prices for a sample of 53 houses (*observations*) in Canton NY (a small town in upstate NY). The corresponding data frame would be composed with the following five *variables*.
+It represents the estimated house prices for a sample of 53 houses (~~*observations*~~) in Canton NY (a small town in upstate NY). The corresponding data frame would be composed with the following five columns (~~*variables*~~).
 
-<li class="fragment fade-in">**Price**: Estimated price (in $1,000’s)</li>
+<li class="fragment fade-in">**Price**: Estimated price (in $1,000 s)</li>
 <li class="fragment fade-in">**Beds**: Number of bedrooms</li>
 <li class="fragment fade-in">**Baths**: Number of bathrooms</li>
 <li class="fragment fade-in">**Size**: Floor area of the house (in 1,000 square feet)</li>
 <li class="fragment fade-in">**Lot**: Size of the lot (in acres)</li>
 
+
 Slide With Code
 ========================================================
+type: prompt 
+incremental: false
+transition: zoom
 
 
 
@@ -48,8 +58,18 @@ summary(data)
 ```
 
 
+Plot section 
+=========================
+type: sub-section
+incremental: true
+
+In this ~~sub-section~~ we are representing each variable versus the variable we want to study, **Price**.
+
+
 Price - Size
 ========================================================
+css: custom.css
+
 
 
 
@@ -67,6 +87,8 @@ Price - Size
 
 Price - Beds
 ========================================================
+incremental: true
+
 
 
 
@@ -76,21 +98,16 @@ Price - Beds
 </div>
 
 
-Price - Beds
+Price - Baths
 ========================================================
+incremental: true
 
 
 
 
-<style>
-  .p_iframe iframe {
-    width:120%;
-    height:710px;
-}
-</style>
 
 <div class="p_iframe">
-<iframe frameborder="0" seamless='seamless' scrolling=no src="plotly2.html"></iframe>
+<iframe frameborder="0" seamless='seamless' scrolling=no src="plotly3.html"></iframe>
 </div>
 
 
