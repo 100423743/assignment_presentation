@@ -561,7 +561,22 @@ body {
   font-family: 'Abel', Impact, sans-serif;
 }
 
+.exclaim .reveal .state-background {
+  background: green;
+} 
 
+.exclaim .reveal div {
+  color: white;
+  font-family: 'Lacquer';
+}
+
+.exclaim .reveal code {
+  color: red;
+}
+
+.reveal section del {
+  color: red;
+}
 
   </style>
   
@@ -786,9 +801,10 @@ hljs.initHighlightingOnLoad();
   <div class="slides">
 
 <section data-state="section" data-transition="linear" data-transition-speed="default">
-<h1>House Prices in Rural NY (Stat2Data)</h1><p>Ignacio Medina de Andrés<br/>03&#x2F;03&#x2F;2021</p>
+<h1>House Prices in Rural NY (Stat2Data)</h1><p>Ignacio Medina de Andres<br/>07&#x2F;03&#x2F;2021</p>
 
 <div class="slideContent" >
+<p><center><img src="https://www.neurosciencemarketing.com/wp-content/uploads/2008/04/home_for_sale_price.jpg" width="625" height="400"></center></p>
 
 </div>
 
@@ -798,9 +814,9 @@ hljs.initHighlightingOnLoad();
 <div class="slideContent" >
 <p>This Houses dataset is obtained from the Stat2Data package (more information clicking: <a href="https://cran.r-project.org/web/packages/Stat2Data/Stat2Data.pdf">link</a>)</p>
 
-<p>It represents the estimated house prices for a sample of 53 houses (<em>observations</em>) in Canton NY (a small town in upstate NY). The corresponding data frame would be composed with the following five <em>variables</em>.</p>
+<p>It represents the estimated house prices for a sample of 53 houses (<del><em>observations</em></del>) in Canton NY (a small town in upstate NY). The corresponding data frame would be composed with the following five columns (<del><em>variables</em></del>).</p>
 
-<p><li class="fragment fade-in"><strong>Price</strong>: Estimated price (in $1,000’s)</li>
+<p><li class="fragment fade-in"><strong>Price</strong>: Estimated price (in $1,000 s)</li>
 <li class="fragment fade-in"><strong>Beds</strong>: Number of bedrooms</li>
 <li class="fragment fade-in"><strong>Baths</strong>: Number of bathrooms</li>
 <li class="fragment fade-in"><strong>Size</strong>: Floor area of the house (in 1,000 square feet)</li>
@@ -809,7 +825,7 @@ hljs.initHighlightingOnLoad();
 </div>
 
 </section>
-<section data-transition="linear" data-transition-speed="default">
+<section data-state="prompt" data-transition="zoom" data-transition-speed="default">
 <h3>Slide With Code</h3>
 <div class="slideContent" >
 <pre><code class="r">summary(data)
@@ -830,6 +846,14 @@ hljs.initHighlightingOnLoad();
  3rd Qu.:1.1000  
  Max.   :3.5000  
 </code></pre>
+
+</div>
+
+</section>
+<section data-state="sub-section" data-transition="linear" data-transition-speed="default">
+<h2>Plot section </h2>
+<div class="slideContent" >
+<p>In this <del>sub-section</del> we are representing each variable versus the variable we want to study, <strong>Price</strong>.</p>
 
 </div>
 
@@ -862,17 +886,10 @@ hljs.initHighlightingOnLoad();
 
 </section>
 <section data-transition="linear" data-transition-speed="default">
-<h3>Price - Beds</h3>
+<h3>Price - Baths</h3>
 <div class="slideContent" >
-<style>
-  .p_iframe iframe {
-    width:120%;
-    height:710px;
-}
-</style>
-
 <div class="p_iframe">
-<iframe frameborder="0" seamless='seamless' scrolling=no src="plotly2.html"></iframe>
+<iframe frameborder="0" seamless='seamless' scrolling=no src="plotly3.html"></iframe>
 </div>
 
 </div>
